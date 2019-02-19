@@ -1,0 +1,216 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	&.ishome
+		.site-header
+			max-height: 700px
+			height: 100vh
+			background-color: $dark
+			color: #fff
+			.top-line
+				padding-top: 40px
+				position: absolute
+				width: 100%
+				z-index: 1
+
+.h1, .h2, .h3, .h4, .h5
+	line-height: 1.4
+	text-transform: uppercase
+
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accent
+	padding: 15px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32
+
+.logo
+	img
+		width: 125px
+		height: auto
+		margin-left: 45px
+
+.phone
+	position: absolute
+	right: 85px
+	top: 44px
+
+	font-family: firasans, sans-serif
+	font-size: 22px
+	white-space: nowrap
+	.fas
+		color: #555
+		font-size: 22px
+		margin-right: 3px
+
+.hamburger
+	position: absolute
+	right: 0
+	top: 34px
+	.hamburger-box
+		width: 34px
+		.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+			border-radius: 0
+			width: 34px
+			height: 3px
+			background-color: #fff
+
+section, header
+	position: relative
+	background-size: cover
+	background-position: center
+
+section
+	background-color: #fff
+
+.mm-navbar 
+	border-bottom-width: 0
+	height: auto
+	position: relative
+
+	.mm-navbar__title img
+			width: 150px
+			height: auto
+			padding: 30px 0
+
+.mm-panel:after, .mm-panel:before
+	display: none
+.mm-panels, .mm-panels>.mm-panel
+	padding-top: 0
+.mm-listitem:after
+	border-bottom-width: 0
+.mm-listitem_selected>.mm-listitem__text
+	background-color: transparent
+.mm-listitem_selected
+	color: $accent
+
+.mm-listitem
+	a
+		transition: color .25s ease
+		padding:
+			left: 14%
+			right: 14%
+			top: 8px
+		&:hover
+			color: $accent
+			&::before
+				color: $accent
+		&::before
+			text-decoration: none
+			font-family: "Font Awesome 5 Free"
+			font-weight: 400
+			font-size: 12px
+			color: #fff
+			content: '\f3a5'
+
+			margin-right: 8px
+			transition: color .25s ease
+
+.header-flex
+	position: relative
+	top: 0
+
+	display: flex
+
+	height: 100vh
+.flex-center
+	margin: auto
+
+.header-composition
+	text-align: center
+	position: relative
+	p
+		margin-top: 40px
+
+.wellcome
+	p
+		font-size: 14px
+		text-transform: uppercase
+		display: flex
+		align-items: center
+		white-space: nowrap
+		margin: 0
+		margin-top: -10px
+		span
+			margin: 0 10px
+		&::before, &::after
+			content: ''
+			height: 1px
+			width: 100%
+			position: relative
+			background-color: #fff
+			display: inline-block
+	.h1
+		padding: 0
+		margin: 0
+		white-space: nowrap
+
+		font-weight: 100
+		font-size: 70px
+		line-height: 1.6	
+
+		border-bottom:
+			weight: 1px
+			color: #fff
+
+
+
+
+@import "media" // Always at the end
