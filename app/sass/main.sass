@@ -17,6 +17,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
+	margin: 0
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -171,30 +172,28 @@ section
 
 .header-composition
 	text-align: center
-	position: relative
 	p
 		margin-top: 40px
 
-.wellcome
-	p
-		font-size: 14px
-		text-transform: uppercase
-		display: flex
-		align-items: center
-		white-space: nowrap
-		margin: 0
-		margin-top: -10px
-		span
-			margin: 0 10px
-		&::before, &::after
-			content: ''
-			height: 1px
-			width: 100%
-			position: relative
-			background-color: #fff
-			display: inline-block
+	.wellcome
+		p
+			font-size: 14px
+			text-transform: uppercase
+			display: flex
+			align-items: center
+			white-space: nowrap
+			margin: 0
+			margin-top: -10px
+			span
+				margin: 0 10px
+			&::before, &::after
+				display: inline-block
+				content: ''
+				height: 1px
+				width: 100%
+				background-color: #fff
 	.h1
-		padding: 0
+		padding: 10px 0
 		margin: 0
 		white-space: nowrap
 
@@ -202,9 +201,7 @@ section
 		font-size: 70px
 		line-height: 1.6	
 
-		border-bottom:
-			weight: 1px
-			color: #FFF
+		border-bottom: 1px solid #fff
 
 
 
